@@ -45,18 +45,19 @@ const getAllNotesHandler = () => ({
   });
 
 const getNoteByIdHandler = (request, h) => {
-    const {id} = request.params;
+    const { id } = request.params;
 
     const note = notes.filter((n) => n.id === id)[0];
 
-    if (id !== undefined) {
+    if (note !== undefined) {
         return {
-            status : 'success',
+            status: 'success',
             data : {
                 note,
             },
         };
     }
+
     const response = h.response({
         status : 'fail',
         message : 'Halaman tidak ditemukan'
