@@ -68,7 +68,7 @@ class NotesHandler {
     try {
       const { id } = request.params;
 
-      this._service.putNoteById(id, request.payload);
+      this._service.editNoteById(id, request.payload);
       return {
         status: 'success',
         message: 'Catatan berhasil diperbarui',
