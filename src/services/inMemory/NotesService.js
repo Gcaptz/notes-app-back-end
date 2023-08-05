@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 const { nanoid } = require('nanoid');
 const InvariantError = require('../../exeptions/InvariantError');
